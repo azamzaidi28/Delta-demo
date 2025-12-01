@@ -1,13 +1,23 @@
+let arr = [1, 2, 3, 4, 5];
+let max = arr.reduce((max, min) => {
+    if (max > min) {
+        return max;
+    } else {
+        return min;
+    }
+})
 
 
-let arr = [1,2,3,4,5,7,8];
-let copy_arr = [...arr];
-copy_arr.push(9);
-console.log(arr)
-console.log(copy_arr);
+console.log(max);
 
-let str = ["ApnaCollege"];
-let newStr = [...str]
+function maxNum(...nums) {
+    let max = nums[0];
+    for (let n of nums) {
+        if (n > max) {
+            max = n;
+        }
+    }
+    return max;
+}
 
-console.log(newStr)
-console.log(..."ApnaCollege");
+console.log(maxNum(1, 2, 3, 4, 5, 67))
